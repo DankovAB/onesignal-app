@@ -1,0 +1,34 @@
+{
+  "compilerOptions": {
+    "module": "none",
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noEmitOnError": true,
+    "removeComments": true,
+    "sourceMap": true,
+    "mapRoot": "/app-out",
+    "types": [
+      "jquery",
+      "jquery.cookie",
+      "bootstrap-notify",
+      "jquery.validation",
+      "underscore",
+      "bootstrap",
+      "jqueryui"
+    ],
+    "lib": [
+      "dom",
+      "es5",
+      "scripthost",
+      "es2015.iterable"
+    ],
+    "target": "es5",
+    //"outDir": "wwwroot/app-out"
+    "outFile": "wwwroot/app-out/app.js"
+  },
+  "compileOnSave": true,
+  "exclude": [
+    "node_modules",
+    "wwwroot"
+  ]
+}

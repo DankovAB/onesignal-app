@@ -1,0 +1,28 @@
+﻿@using BaseApp.Common
+@model BaseApp.Web.Areas.Admin.Models.App.ListAppViewModel
+
+<table width="100%">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>CreatedAt</th>
+        <th policy="@Constants.Policy.Admin">
+            Actions
+        </th>
+    </tr>
+    @foreach (var item in Model.Items)
+    {
+        <tr>
+            <td>@item.Id</td>
+            <td>@item.Name</td>
+            <td>@item.CreatedAt.ToFormat()</td>
+            <td policy="@Constants.Policy.Admin">
+                @Html.ActionLink("Edit", "Edit", new { appId = item.Id })
+            </td>
+        </tr>
+    }
+</table>
+
+<br/>
+
+<p>Total count: @Model.TotalCount</p>
